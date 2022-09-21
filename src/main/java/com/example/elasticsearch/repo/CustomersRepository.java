@@ -14,13 +14,15 @@ public class CustomersRepository
 {
 	@Autowired
 	RestHighLevelClient restHighLevelClient;
-		public SearchResponse getAllCustomers(SearchRequest searchRequest) throws IOException
+
+	public SearchResponse getAllCustomers(SearchRequest searchRequest) throws IOException
 	{
 
 		return restHighLevelClient.search(searchRequest, RequestOptions.DEFAULT);
 	}
 
-	public SearchResponse getCustomerAggregation(SearchRequest request) throws IOException {
+	public SearchResponse getCustomerAggregation(SearchRequest request) throws IOException
+	{
 		return restHighLevelClient.search(request, RequestOptions.DEFAULT);
 	}
 }

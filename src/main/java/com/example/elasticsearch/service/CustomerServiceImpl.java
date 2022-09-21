@@ -113,7 +113,7 @@ public class CustomerServiceImpl implements CustomerService
 
 
 	@Override
-	public CustomerModel getCustomerAverageAge() throws IOException
+	public CustomerModel getCustomerAggregation() throws IOException
 	{
 		CustomerModel customerModel = new CustomerModel();
 

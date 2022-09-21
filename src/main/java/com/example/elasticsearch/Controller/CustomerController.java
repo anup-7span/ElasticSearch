@@ -75,7 +75,7 @@ public class CustomerController
 
 	@GetMapping("/getAverageAge")
 	public CustomerModel getCustomerAverageAge() throws IOException {
-		return customerService.getCustomerAverageAge();
+		return customerService.getCustomerAggregation();
 	}
 
 }
