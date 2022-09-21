@@ -1,10 +1,9 @@
 package com.example.elasticsearch.Controller;
 
+import com.example.elasticsearch.model.CustomerModel;
 import com.example.elasticsearch.entity.Customer;
 import com.example.elasticsearch.service.CustomerServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -72,5 +71,11 @@ public class CustomerController
 			@RequestParam(required = false) Double max_amount,
 			@RequestParam(required = false) Boolean productIsAvailable) throws IOException {
 			return customerService.fetchCustomSearchCustomer(min_age, max_age, min_amount, max_amount, productIsAvailable);
-		}
+	}
+
+	@GetMapping("/getAverageAge")
+	public CustomerModel getCustomerAverageAge() throws IOException {
+		return customerService.getCustomerAverageAge();
+	}
+
 }

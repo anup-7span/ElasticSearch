@@ -1,5 +1,6 @@
 package com.example.elasticsearch.service;
 
+import com.example.elasticsearch.model.CustomerModel;
 import com.example.elasticsearch.entity.Customer;
 
 import java.io.IOException;
@@ -17,4 +18,6 @@ public interface CustomerService
 
 	List<Customer> fetchCustomSearchCustomer(
 			Integer min_age, Integer max_age, Double min_amount, Double max_amount, Boolean productIsAvailable) throws IOException;
+
+	CustomerModel getCustomerAverageAge() throws IOException;
 }

@@ -19,4 +19,8 @@ public class CustomersRepository
 
 		return restHighLevelClient.search(searchRequest, RequestOptions.DEFAULT);
 	}
+
+	public SearchResponse getCustomerAggregation(SearchRequest request) throws IOException {
+		return restHighLevelClient.search(request, RequestOptions.DEFAULT);
+	}
 }
